@@ -4,10 +4,17 @@ node {
         // git branch: '${branch}', url: 'https://github.com/gtvfx/jenkins_local'
     }
     stage('Build') {
-        echo 'Building...'
-        bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" --version'
-        bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" build ConsoleApp1'
-        echo 'Building new feature'
+        try {
+            echo 'Building...'
+            bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" --version'
+            bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" build ConsoleApp1'
+            echo 'Building new feature'
+        }catch {
+            echo 'Something went wrong...'
+        }finally {
+            // cleanup
+        }
+        
     }
     stage('test') {
         echo 'Testing...'
