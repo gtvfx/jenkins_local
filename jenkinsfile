@@ -6,8 +6,8 @@ node {
     stage('Build') {
         try {
             echo 'Building...'
-            bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" --version'
-            bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" build ConsoleApp1'
+            // bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" --version'
+            // bat label: '', script: 'call "C:\\Program Files\\dotnet\\dotnet.exe" build ConsoleApp1'
             echo 'Building new feature'
         }catch {
             echo 'Something went wrong...'
