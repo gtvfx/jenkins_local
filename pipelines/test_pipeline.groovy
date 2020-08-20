@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     def helpers = new Helpers
-                    print("helpers: " + helpers)
+                    println("helpers: " + helpers)
                 }
             }
         }
