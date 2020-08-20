@@ -8,7 +8,7 @@ pipeline {
         stage('validate Helpers') {
             steps {
                 script {
-                    def helpers = new Helpers;
+                    def helpers = new Helpers
                     print("helpers: " + helpers)
                 }
             }
